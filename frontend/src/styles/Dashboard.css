@@ -449,6 +449,15 @@
     background: linear-gradient(90deg, #4caf50, #cddc39);
     transition: width 0.3s ease;
   }
+
+  .center-actions {
+    display: flex;
+    justify-content: center; /* center as a group */
+    align-items: center;
+    gap: 14px;               /* space between buttons */
+    margin: 24px 0 8px;      /* spacing from cards */
+  }
+  
   
   .overall-text {
     font-size: 0.9rem;

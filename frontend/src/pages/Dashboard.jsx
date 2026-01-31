@@ -351,22 +351,6 @@ const quizProgress = useMemo(() => {
             🛠 Admin Panel
           </button>
         )}
-
-        <button
-           className="ghost-button"
-           type="button"
-           onClick={() => navigate("/adventure", { state: { userId: user.id } })}
-         >
-           Anti-Phish Blaster  🎮
-         </button>
-
-          <button
-            className="ghost-button"
-            type="button"
-            onClick={() => navigate("/glossary")}
-          >
-            Glossary 📚
-          </button>
           
           <button className="ghost-button" type="button" onClick={() => setShowAccount(true)}>
             ⚙️ Account
@@ -562,6 +546,25 @@ const quizProgress = useMemo(() => {
               );
             })}
         </section>
+
+        <div className="center-actions">
+          <button
+            className="ghost-button"
+            type="button"
+            onClick={() => navigate("/adventure", { state: { userId: user.id } })}
+          >
+            Anti-Phish Blaster 🎮
+          </button>
+
+          <button
+            className="ghost-button"
+            type="button"
+            onClick={() => navigate("/glossary")}
+          >
+            Glossary 📚
+          </button>
+        </div>
+
 
       {/* Leaderboard */}
       <section className="leaderboard-section kids-leaderboard">
