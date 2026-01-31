@@ -28,14 +28,14 @@
   }
   
   /* LIMIT CONTENT TO A NICE MAX WIDTH BUT KEEP IT CENTERED */
-  @media (min-width: 1100px) {
-    .game-header,
-    .game-main {
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .game-header,
+  .game-main {
+    width: 100%;
+    max-width: 1200px;   /* ✅ always max width */
+    margin-left: auto;
+    margin-right: auto;
   }
+
   
   .back-btn {
     border: none;
@@ -1071,9 +1071,12 @@
   display: block;
 
   /* ✅ THIS FIXES "fixilated" look */
-  object-fit: cover;
+  object-fit: contain;
 
   background: #000;
+}
+@supports not (object-fit: cover) {
+  .lesson-video-player{ object-fit: contain; }
 }
 
 /* Mobile */

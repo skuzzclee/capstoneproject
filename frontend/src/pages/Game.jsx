@@ -2692,60 +2692,7 @@ export default function Game() {
               )}
 
 
-              <div className="lesson-header">
-                <span className="lesson-step">
-                  Card {lessonIndex + 1} of {lessonSteps.length}
-                </span>
-                <h2 className="lesson-title">{currentLesson.title}</h2>
-                <p className="lesson-prompt">{currentLesson.prompt}</p>
-              </div>
 
-              <div className="lesson-choices">
-                {currentLesson.choices.map((choice, idx) => {
-                  const isChosen = lessonSelected === idx;
-                  const isCorrectChoice = choice.correct;
-                  let extra = "";
-                  if (lessonRevealed && isChosen && isCorrectChoice)
-                    extra = "lesson-choice-correct";
-                  else if (lessonRevealed && isChosen && !isCorrectChoice)
-                    extra = "lesson-choice-incorrect";
-                  else if (lessonRevealed && isCorrectChoice)
-                    extra = "lesson-choice-right-answer";
-
-                  return (
-                    <button
-                      key={idx}
-                      type="button"
-                      className={`lesson-choice-btn ${extra}`}
-                      onClick={() => handleLessonChoice(idx)}
-                    >
-                      {choice.label}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {lessonRevealed && (
-                <p className="lesson-feedback">
-                  {
-                    currentLesson.choices[lessonSelected]?.explanation ||
-                    "Great thinking! Keep going."
-                  }
-                </p>
-              )}
-
-              <div className="lesson-footer">
-                <button
-                  type="button"
-                  className="next-btn"
-                  disabled={!lessonRevealed}
-                  onClick={handleLessonNext}
-                >
-                  {lessonIndex === lessonSteps.length - 1
-                    ? "Start the quiz"
-                    : "Next card"}
-                </button>
-              </div>
             </div>
           )}
 
