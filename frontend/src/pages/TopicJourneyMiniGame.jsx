@@ -2586,8 +2586,24 @@ const ui = {
     textAlign: "center",
     boxShadow: "0 18px 60px rgba(0,0,0,0.55)",
   },
-  overlayTitle: { fontSize: 22, fontWeight: 900, marginBottom: 6 },
-  overlayText: { opacity: 0.92, lineHeight: 1.35, marginBottom: 12, fontSize: 14 },
+  overlayTitle: {
+    fontSize: 26,              
+    fontWeight: 900,
+    marginBottom: 8,
+    color: "#eaf6ff",           
+    textShadow: `
+      0 2px 8px rgba(56,189,248,0.35),
+      0 0 18px rgba(59,130,246,0.25)
+    `,
+    letterSpacing: "0.3px",
+  },
+  overlayText: {
+    fontSize: 15,
+    lineHeight: 1.5,
+    marginBottom: 14,
+    color: "#dbeafe",          
+    textShadow: "0 1px 4px rgba(0,0,0,0.6)",
+  },
   overlaySmall: { opacity: 0.8, marginBottom: 10, fontSize: 12 },
   primaryBtn: {
     border: "none",

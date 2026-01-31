@@ -504,10 +504,17 @@ const quizProgress = useMemo(() => {
       </div>
     </section>
 
-
+    
       {/* Topic description heading */}
       <section className="topic-overview">
-        <h2>🧙‍♂️ CyberQuest.TO Topics</h2>
+      <h2 className="topic-title">
+        <img
+          src={cyberQuestLogo}
+          alt="CyberQuest logo"
+          className="brand-logo"
+        />
+        <span>CyberQuest.TO Topics</span>
+      </h2>
         <p className="topic-overview-text">
           These four quizzes match your lesson topics: digital footprints,
           personal information, passwords & passphrases, and social media
