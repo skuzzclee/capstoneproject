@@ -18,10 +18,10 @@ import lessonVideo4 from "../assets/video4.mp4";
 // -------------------- STATIC CONTENT -------------------- //
 
 const LESSON_VIDEOS = {
-  1: lessonVideo1,
-  2: lessonVideo2,
-  3: lessonVideo3,
-  4: lessonVideo4
+  1: "/v2.mp4",
+  2: "/video2.mp4",
+  3: "/video3.mp4",
+  4: "/video4.mp4",
 };
 
 const getVideoType = (src) => {
@@ -2603,6 +2603,11 @@ export default function Game() {
                   controls
                   playsInline
                   preload="metadata"
+                  onError={(e) => {
+                    const v = e.currentTarget;
+                    console.log("VIDEO ERROR CODE:", v.error?.code);
+                    console.log("SRC:", videoSrc);
+                  }}
                 >
                   <source src={videoSrc} type={getVideoType(videoSrc)} />
                 </video>

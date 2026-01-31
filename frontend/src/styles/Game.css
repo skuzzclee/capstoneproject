@@ -1071,7 +1071,7 @@
   display: block;
 
   /* ✅ THIS FIXES "fixilated" look */
-  object-fit: contain;
+  object-fit: cover;
 
   background: #000;
 }
@@ -1163,4 +1163,24 @@
 .feedback-msg {
   margin-top: 8px;
   font-size: 14px;
+}
+
+
+.game-page {
+  color: #0f172a; /* default readable text */
+}
+
+.quiz-card {
+  color: #0f172a; /* ensure readable inside white card */
+}
+
+.lesson-wrapper { background: #000; }
+.lesson-wrapper * { color: #000; }
+
+.lesson-wrapper {
+  background: transparent !important;
+  color: #0f172a !important;
+}
+.lesson-wrapper * {
+  color: inherit !important;
 }
