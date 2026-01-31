@@ -10,7 +10,7 @@ import {
     PasswordsJourney2D,
     SocialMediaJourney2D,
   } from "./TopicJourneyMiniGame";
-import lessonVideo1 from "../assets/video1.mp4";
+import lessonVideo1 from "../assets/v1.mp4";
 import lessonVideo2 from "../assets/video2.mp4";
 import lessonVideo3 from "../assets/video3.mp4";
 import lessonVideo4 from "../assets/video4.mp4";
