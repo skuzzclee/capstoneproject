@@ -1174,32 +1174,47 @@
   color: #0f172a; /* ensure readable inside white card */
 }
 
-.lesson-wrapper { background: #000; }
-.lesson-wrapper * { color: #000; }
-
-.lesson-wrapper {
-  background: transparent !important;
+.tab-btn {
+  background: #ffffff !important;
   color: #0f172a !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  border-radius: 12px;
 }
-.lesson-wrapper * {
-  color: inherit !important;
-}
-
-.story-lesson,
-.lesson-wrapper,
-.lesson-content {
-  color: #ffffff; /* force readable text */
+.tab-btn:hover {
+  background: #f8fafc !important;
 }
 
-.story-lesson h1,
-.story-lesson h2,
-.story-lesson h3,
-.story-lesson p,
-.story-lesson li {
+/* ===== Game mode toggle wrapper ===== */
+.game-mode-toggle {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ===== Mode buttons (force consistent look) ===== */
+.mode-btn {
+  background: #ffffff;                 /* ✅ force white */
+  color: #0f172a;                      /* ✅ dark text */
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s;
+}
+
+/* Hover */
+.mode-btn:hover {
+  background: #f8fafc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+/* Active tab */
+.mode-btn.active {
+  background: linear-gradient(135deg, #6366f1, #38bdf8);
   color: #ffffff;
-}
-
-.story-lesson {
-  background: #ffffff;
-  color: #0f172a;
+  border-color: transparent;
+  box-shadow: 0 6px 18px rgba(59,130,246,0.45);
 }
